@@ -9,12 +9,17 @@ import { HomeComponent } from './Home/home.component';
 import { QuickComponent } from './Home/QuickSearch.component';
 import { SearchComponent } from './Home/Search.component';
 import { MyTextPipe } from './Pipe/myUpper.pipe';
+import {HttpClientModule} from '@angular/common/http';
+import {HomeService} from './services/home.service';
+import { ListingComponent } from './listing/listing.component';
+import { DiscountPipe } from './discount.pipe'
 
 // decorator (meta data)
 @NgModule({
     // All the modules will declare here
     imports:[
-        BrowserModule
+        BrowserModule,
+        HttpClientModule
     ],
     // All Component and pipe
     declarations:[
@@ -24,10 +29,14 @@ import { MyTextPipe } from './Pipe/myUpper.pipe';
         HomeComponent,
         QuickComponent,
         SearchComponent,
-        MyTextPipe
+        MyTextPipe,
+        ListingComponent,
+        DiscountPipe
     ],
     // All services will declare here
-    providers:[],
+    providers:[
+        HomeService
+    ],
 
     // only and only one component(first/main)
     bootstrap:[

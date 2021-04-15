@@ -1,4 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import { ICity } from '../model/location.model';
+import {HomeService} from '../services/home.service';
+import { IHotel } from '../model/hotel.model';
 
 @Component({
     selector:'app-search',
@@ -6,8 +9,21 @@ import {Component} from '@angular/core';
     styleUrls:['./Search.component.css']
 })
 
-export class SearchComponent{
+export class SearchComponent implements OnInit{
     title: String = 'Plan Your Trip With SimpliHotel';
-    city: any[] = ['Delhi','Mumbai','Chandigarh','Pune']
-    date = new Date()
+    location: ICity[];
+    hotels: IHotel[]
+
+    constructor(private homeService:HomeService){}
+
+    ngOnInit(): void{
+        this.homeService.getCity()
+            .subscribe((data) => this.location =data)
+    }
+
+    citySelect(cityId){
+        console.log(cityId)
+        this.homeService.getHwrtC(cityId)
+            .subscribe((data) => this.hotels = data)
+    }
 }

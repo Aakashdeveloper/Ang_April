@@ -7,21 +7,24 @@
             Discover Trip By Type
         </p>
         <br/>
-        <a>
-            <div class="tileContainer">
-                <div class="tileComponent1">
-                    <img />
-                </div>
-                <div class="tileComponent2">
-                    <div class="componentHeading">
-                        Heading
+        <span *ngFor="let trip of tripType">
+            <a>
+                <div class="tileContainer">
+                    <div class="tileComponent1">
+                        <img [src]="trip.image"/>
                     </div>
-                    <div class="componentSubHeading">
-                        Sub Heading
+                    <div class="tileComponent2">
+                        <div class="componentHeading">
+                            {{trip.name}}
+                        </div>
+                        <div class="componentSubHeading">
+                            Start your {{trip.name}} with us
+                            <p>On Low Cost of {{500 | currency:'INR'}}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </a>
+            </a>
+        </span>
         
     </div>
 </div>
