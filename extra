@@ -230,3 +230,9 @@ lowercase
 currency
 date 
 percentage
+
+ng g c listing
+ng generate component listing
+ng g p listing
+ng g m listing
+ng g s listing

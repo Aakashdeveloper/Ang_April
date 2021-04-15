@@ -12,14 +12,15 @@ import { MyTextPipe } from './Pipe/myUpper.pipe';
 import {HttpClientModule} from '@angular/common/http';
 import {HomeService} from './services/home.service';
 import { ListingComponent } from './listing/listing.component';
-import { DiscountPipe } from './discount.pipe'
+import {AppRoutingModule} from './app-routing.module'
 
 // decorator (meta data)
 @NgModule({
     // All the modules will declare here
     imports:[
         BrowserModule,
-        HttpClientModule
+        HttpClientModule,
+        AppRoutingModule
     ],
     // All Component and pipe
     declarations:[
@@ -30,8 +31,7 @@ import { DiscountPipe } from './discount.pipe'
         QuickComponent,
         SearchComponent,
         MyTextPipe,
-        ListingComponent,
-        DiscountPipe
+        ListingComponent
     ],
     // All services will declare here
     providers:[
