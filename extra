@@ -1,0 +1,232 @@
+https://code.visualstudio.com/
+https://nodejs.org/en/
+
+> Full App with Ang
+> Login/Out with JWT
+> Login/out with oauth(github)
+> Template Forms
+> Reactive Forms
+> Testing
+> Mock Api 
+>>>>>>>Deployment<<<<<<
+MEAN
+Heroku
+Docker
+CI/CD with aws
+
+
+>>>>>>>>>>>>>>>Not<<<<<<<<<<<<<<
+Any thing related to how to make Api
+HTML/CSS 
+Database
+
+
+(get) hotels>         https://developerfunnel.herokuapp.com/hotels
+(get) hotelwrtcity >  https://developerfunnel.herokuapp.com/hotels?city=6
+(get) hoteldetails >  https://developerfunnel.herokuapp.com/hotelsdetails/1
+(get) onbasisoftrip > https://developerfunnel.herokuapp.com/hotellist/1
+
+(get) roomfilter >    https://developerfunnel.herokuapp.com/hotellist/4?roomtype=1
+
+(get) costfilter >    https://developerfunnel.herokuapp.com/hotellist/1?hcost=1000&lcost=500
+(get) cityname >      https://developerfunnel.herokuapp.com/location
+(get) rooms >         https://developerfunnel.herokuapp.com/rooms
+(get) triptype>       https://developerfunnel.herokuapp.com/booking
+(get) bookingdetails> https://developerfunnel.herokuapp.com/allBooking
+(post)placebooking >  https://developerfunnel.herokuapp.com/placeBook
+
+
+/////////////
+/******GetAllUser*****/
+(GET)> http://localhost:5000/api/auth/users
+
+/******Register*****/
+(POST)> http://localhost:5000/api/auth/register
+(body) => {"name":"Aakash", "email":"aa@gmail.com","password":"12345678","role?":"user"}
+
+
+/******Login*****/
+(POST) => http://localhost:5000/api/auth/login
+(body)  => {"email":"aa@gmail.com","password":"12345678"}
+(response)=> {auth:true,token:'dgsdg'}
+
+/******UserInfo*****/
+(GET) => http://localhost:5000/api/auth/userinfo
+(Header) => {'x-access-token':'token value from login'}
+
+
+
+DataTypes
+> variable +
+> Operations +
+> String literals +
+> let, const +
+> localstorage +
+> sessionStorage +
+> cookies +
+> if else +
+> ternery Operations +
+> array +
+> Functions +
+> Rest +
+> Es6
+    > maps,filter +
+> object +
+> JSON +
+> package.JSON +
+> npm +
+> setup angular App
+> SPA
+> get started with angular
+> component
+> style in angular(css & bootstrap)
+///////////////////////////////
+> Es6
+    > Transpile +
+    > import export +
+> Es6
+    > classes +
+
+////////////
+databinding
+pipe
+services
+
+
+
+> package.JSON 
+    > Entry point to the application
+    > It contains start/build/test
+    > it will contains all packages
+    > Meta Data (name,version,description)
+
+//Step to generate package.json 
+* NodeJs must be installed in system
+> navigate to the folder using cmd/terminal
+> type npm init 
+> Answer all question
+> type "yes"
+
+-------------------
+> go inside the folder
+> npm init -y 
+
+npm > Node Package manager
+
+///////////////
+Local dependency
+    > local to the folder
+    > used in the same application
+dev dependency
+    > local to the folder
+    > use only at the time of development
+global dependency
+    > local to the system
+    > need admin access to install
+    > only require at the time of generate
+
+///////////////
+How to local dependency
+//////////////
+* NodeJs must be installed in system
+> navigate to the folder using cmd/terminal
+> npm i packagename / npm install packagename / npm i packagename --save
+
+///////////////
+How to dev dependency
+//////////////
+* NodeJs must be installed in system
+> navigate to the folder using cmd/terminal
+>  npm i packagename --save-dev
+
+///////////////
+How to global dependency
+//////////////
+Window
+>>>>> Only one time in new system<<<<<<<<<<
+> open cmd as admin
+> npm i -g @angular/cli
+
+Linux/mac
+> open terminal
+> sudo npm i -g @angular/cli
+
+
+//////////////////////////////
+Step to generate angular app
+/////////////////////////////
+Window
+>>>>> Only one time in new system<<<<<<<<<<
+> open cmd as admin
+> npm i -g @angular/cli
+
+>>>> Next all time you want new application<<<<<<
+> navigate to the folder using cmd/terminal
+> ng new appname
+
+
+>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<
+> single page application
+> folder walkthrough
+
+
+
+//////////////////////////////////
+    File walkthrough
+/////////////////////////////////
+tslint.json ==> make structure of code
+tsconfig.spec.json => help to locate test files
+tsconfig.json => it will tell where is build code and which version to target
+tsconfig.app.json => help to locate application file
+ReadMe.md => Details Description of application
+package.json > use for dependency,command and small Description, meta data
+package-lock.json => use for child dependency
+angular.json => first file to run and location all the part of app 
+.editorconfig => for editor standards
+styles.css > common css of application
+polyfills => its help in supporting for all browsers
+index.html> first file load in browser 
+favicon> simple icon 
+env => help to build for prod/dev 
+assets => all static files images css videos
+app > all developemt happen here
+main > this will help to locate main module
+
+>>>>>>>Bootstrap<<<<<<<
+angular.json => main.ts => app.module.ts => app.component.ts
+>>>>>>>Compile<<<<<<<
+browser will run index.html
+
+//////////////////////////////
+    Building Block Of Angular
+//////////////////////////
+
+Modules => Module is parent of application (ngModule)
+Component => HTML,CSS,Logic (component)
+Pipe     => Run time data change (pipe,pipe transform)
+Services => To connect with external agent dependency injection (Injectable)
+Routing  => To manage multiple page (ngModule)
+ 
+main-modules(app.modules.ts)
+main-compo  (app.component.ts)
+
+
+//////////////////////////////
+Binding
+////////////
+One Way Binding  (ts => html)
+> data binding {{}}
+> property Binding []
+> Event Binding ()
+
+Two Way Binding [()]  (ts <=> html)
+
+///structural directive////
+*ngFor
+*ngIf
+
+uppercase
+lowercase
+currency
+date 
+percentage
