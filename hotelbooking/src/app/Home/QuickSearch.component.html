@@ -8,7 +8,7 @@
         </p>
         <br/>
         <span *ngFor="let trip of tripType">
-            <a>
+            <a [routerLink] = "['/listing',trip._id]">
                 <div class="tileContainer">
                     <div class="tileComponent1">
                         <img [src]="trip.image"/>

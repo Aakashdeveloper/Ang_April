@@ -15,7 +15,7 @@
             </option>
         </select>
 
-        <select class="hotelDropDown">
+        <select class="hotelDropDown" (change)="hotelSelect($event.target.value)">
             <option>-----SELECT HOTEL------</option>
             <option *ngFor="let hotel of hotels" [value]="hotel._id">
                 {{hotel.name}} | {{hotel.locality}}

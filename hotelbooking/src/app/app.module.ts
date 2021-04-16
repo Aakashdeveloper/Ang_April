@@ -12,7 +12,13 @@ import { MyTextPipe } from './Pipe/myUpper.pipe';
 import {HttpClientModule} from '@angular/common/http';
 import {HomeService} from './services/home.service';
 import { ListingComponent } from './listing/listing.component';
-import {AppRoutingModule} from './app-routing.module'
+import {AppRoutingModule} from './app-routing.module';
+import {FormsModule} from '@angular/forms';
+import { ListingService } from './services/listing.service';
+import { HotelSearchPipe } from './Pipe/hotel.pipe';
+import { RoomFilterComponent } from './filters/roomfilter.component';
+import { DetailsComponent } from './details/details.component';
+import { DetailsService } from './services/details.service';
 
 // decorator (meta data)
 @NgModule({
@@ -20,7 +26,8 @@ import {AppRoutingModule} from './app-routing.module'
     imports:[
         BrowserModule,
         HttpClientModule,
-        AppRoutingModule
+        AppRoutingModule,
+        FormsModule
     ],
     // All Component and pipe
     declarations:[
@@ -31,11 +38,16 @@ import {AppRoutingModule} from './app-routing.module'
         QuickComponent,
         SearchComponent,
         MyTextPipe,
-        ListingComponent
+        ListingComponent,
+        HotelSearchPipe,
+        RoomFilterComponent,
+        DetailsComponent
     ],
     // All services will declare here
     providers:[
-        HomeService
+        HomeService,
+        ListingService,
+        DetailsService
     ],
 
     // only and only one component(first/main)

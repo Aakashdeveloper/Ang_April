@@ -1,1 +1,65 @@
-<p>listing works!</p>
+<div class="panel panel-primary">
+    <div class="panel-body">
+        <div class="form-group">
+            <input class="form-control" placeholder="Enter Hotel Name"
+            [(ngModel)]="userInput"
+            />
+        </div>
+        <div>
+            <p>You are searching for hotel >>> {{userInput}}</p>
+        </div>
+    </div>
+</div>
+<hr/>
+<div class="row">
+    <div class="col-md-2">
+        <app-roomFilter [filterName]='myfiltername' (roomClicked)="dataRecive($event)"></app-roomFilter>
+    </div>
+    <div *ngIf="hotels && hotels.length else noData">
+        <div class="col-md-10">
+           <div class="container-fluid">
+               <div class="main-heading">
+                   <div class="row">
+                       <div class="col-md-12">
+                           <div class="Item" *ngFor="let hotel of hotels | hotelSearch:userInput:roomTypeId">
+                               <div class="row">
+                                   <div class="col-md-5">
+                                       <img class="Image" [src]="hotel.thumb"/>
+                                   </div>
+                                   <div class="col-md-7">
+                                       <div class="hotel_name">
+                                           <span><a [routerLink]="['/details',hotel._id]">{{hotel.name}}</a></span>
+                                           <div class="city_name">{{hotel.city_name}}</div>
+                                           <div class="address-text">{{hotel.locality}}</div>
+                                           <div class="address-text">{{hotel.address}}</div>
+                                           <div class="address-text">{{hotel.cost|currency:'INR'}}</div>
+                                       </div>
+                                   </div>
+                               </div>
+                               <hr>
+                               <div class="row">
+                                   <div class="col-md-3">
+                                        <div class="cuisine">Room Type</div>
+                                        <div class="cuisine">Trip Type</div>
+                                   </div>
+                                   <div class="col-md-9">
+                                    <div class="cuisine_data">
+                                        {{hotel.type[0].name}},  {{hotel.type[1].name}},  {{hotel.type[2].name}}
+                                    </div>
+                                    <div class="cuisine_data">
+                                        {{hotel.tripType[0].name}},  {{hotel.tripType[1].name}}
+                                    </div>
+                                </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </div>
+    <ng-template #noData>
+        <img src="../../assets/loader.gif"/>
+    </ng-template>
+    
+</div>
