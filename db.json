@@ -1,0 +1,20 @@
+{
+  "employee": [
+    {
+      "firstname": "Nikita",
+      "lastname": "sharam",
+      "email": "nikita@gmail.com",
+      "password": "12345678",
+      "codelang": "Node",
+      "id": 3
+    },
+    {
+      "firstname": "Bhumika",
+      "lastname": "sharam",
+      "email": "bhumika@gmail.com",
+      "password": "123456789",
+      "codelang": "Angular",
+      "id": 4
+    }
+  ]
+}
