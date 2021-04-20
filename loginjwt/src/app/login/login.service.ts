@@ -6,6 +6,7 @@ import {Observable} from 'rxjs';
 
 export class LoginService {
     private url = "http://localhost:5000/api/auth/login";
+    private userinfo = "http://localhost:5000/api/auth/userinfo"
 
     constructor(private http: HttpClient ) {}
 
@@ -16,5 +17,10 @@ export class LoginService {
                 'Accept':'application/json'
             }
         })
+    }
+
+    getUserInfo(token){
+        sessionStorage.setItem('TOKEN_NUMBER',token)
+        return this.http.get(this.userinfo,{headers:{'x-access-token':token}})
     }
 }

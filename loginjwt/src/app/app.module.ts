@@ -4,7 +4,7 @@ import { FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
-import { AdminComponent } from './admin/admin.component';
+import { AdminPage } from './admin/admin.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HeaderComponent } from './header/header.component';
 import { RegisterService } from './register/userform.service';
@@ -12,11 +12,14 @@ import { RegisterComponent } from './register/userform.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './login/login.service';
+import { LoginGaurdService } from './login-gaurd.service';
+import { AdminGaurdService } from './admin-gaurd.service';
+import { AdminPageService } from './admin/Admin.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminComponent,
+    AdminPage,
     ProfileComponent,
     HeaderComponent,
     RegisterComponent,
@@ -30,7 +33,10 @@ import { LoginService } from './login/login.service';
   ],
   providers: [
     RegisterService,
-    LoginService
+    LoginService,
+    LoginGaurdService,
+    AdminGaurdService,
+    AdminPageService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {AdminPageService} from './Admin.service';
+import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-admin',
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.css']
+    templateUrl:'./Admin.component.html'
 })
-export class AdminComponent implements OnInit {
 
-  constructor() { }
+export class AdminPage implements OnInit{
+    allUser;
 
-  ngOnInit(): void {
-  }
-
+    constructor(private adminService:AdminPageService,
+                private router:Router) {
+            
+                }
+    
+    ngOnInit(){
+        this.adminService.allUser()
+        .subscribe((res) => this.allUser = res);
+    }
 }

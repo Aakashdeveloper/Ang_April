@@ -5,15 +5,18 @@ https://nodejs.org/en/
 > Template Forms
 > Login/Out with JWT
 > Mock Api 
-
-> Login/out with oauth(github)
-> Reactive Forms
-> Testing
 >>>>>>>Deployment<<<<<<
 MEAN
 Heroku
 Docker
 CI/CD with aws
+
+////////////////////
+> Login/out with oauth(github)
+> Reactive Forms
+> Testing
+
+
 
 
 >>>>>>>>>>>>>>>Not<<<<<<<<<<<<<<
@@ -245,3 +248,6 @@ queryParam ? (optional)
 ////////////////////
 npm i -g json-server
 json-server --watch db.json --port 8900
+
+docker build . -t appname
+docker run -p 8700:4200 appname
