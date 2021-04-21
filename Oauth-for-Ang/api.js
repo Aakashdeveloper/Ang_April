@@ -22,6 +22,7 @@ app.get('/',(req,res) => {
 });
 
 app.post('/oauth',(req,res) => {
+    console.log(req.body)
     superagent
     .post('https://github.com/login/oauth/access_token')
     .send({

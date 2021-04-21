@@ -6,11 +6,13 @@ import {AdminPage} from './admin/admin.component';
 import {ProfileComponent} from './profile/profile.component';
 import { LoginGaurdService } from './login-gaurd.service'
 import { AdminGaurdService } from './admin-gaurd.service';
+import {GitProfileComponent} from './gitprofile/gitProfile.component'
 
 const routes: Routes = [
     {path: "register", component: RegisterComponent},
     {path: "login", component: LoginComponent},
-    {path: "profile", component: ProfileComponent, canActivate:[LoginGaurdService]},
+    {path: "profile", component: ProfileComponent},
+    {path: "gitprofile", component: GitProfileComponent},
     {path: "admin", component: AdminPage, canActivate:[AdminGaurdService]},
     {path: "", redirectTo:'register', pathMatch:'full'}
 ]

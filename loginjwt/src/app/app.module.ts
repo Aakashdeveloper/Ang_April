@@ -15,6 +15,7 @@ import { LoginService } from './login/login.service';
 import { LoginGaurdService } from './login-gaurd.service';
 import { AdminGaurdService } from './admin-gaurd.service';
 import { AdminPageService } from './admin/Admin.service';
+import { GitProfileComponent } from './gitprofile/gitProfile.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AdminPageService } from './admin/Admin.service';
     ProfileComponent,
     HeaderComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    GitProfileComponent
   ],
   imports: [
     BrowserModule,

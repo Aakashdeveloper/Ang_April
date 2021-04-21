@@ -10,6 +10,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class DetailsComponent implements OnInit {
   details: any[];
   id;
+  hotel_name;
   tripid = sessionStorage.getItem('tripid')?sessionStorage.getItem('tripid'):1
 
   constructor(
@@ -24,8 +25,14 @@ export class DetailsComponent implements OnInit {
       .subscribe((data) => this.details = data)
   }
 
+
   onBack():void{
     this.router.navigate(['/listing',this.tripid])
+  }
+
+  placeBooking():void{
+    sessionStorage.setItem('cost',this.details[0].cost)
+    this.router.navigate(['/bookingForm',this.details[0].name])
   }
 
 }

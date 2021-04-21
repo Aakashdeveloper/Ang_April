@@ -19,6 +19,8 @@ import { HotelSearchPipe } from './Pipe/hotel.pipe';
 import { RoomFilterComponent } from './filters/roomfilter.component';
 import { DetailsComponent } from './details/details.component';
 import { DetailsService } from './services/details.service';
+import { BookingComponent } from './booking/booking.component';
+import { BookingService } from './services/booking.service';
 
 // decorator (meta data)
 @NgModule({
@@ -41,13 +43,15 @@ import { DetailsService } from './services/details.service';
         ListingComponent,
         HotelSearchPipe,
         RoomFilterComponent,
-        DetailsComponent
+        DetailsComponent,
+        BookingComponent
     ],
     // All services will declare here
     providers:[
         HomeService,
         ListingService,
-        DetailsService
+        DetailsService,
+        BookingService
     ],
 
     // only and only one component(first/main)

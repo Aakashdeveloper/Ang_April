@@ -1,0 +1,74 @@
+<br/>
+<div class="panel panel-danger">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-md-10">
+                Booking
+            </div>
+            <div class="col-md-2">
+                
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-body">
+        <form #form="ngForm" (submit)="submitForm(form)">
+            <div class="form-group">
+                <label class="control-label">
+                    Id
+                </label>
+                <input type="text" 
+                       class="form-control" 
+                       name="id"
+                       readonly
+                       [(ngModel)]="myBooking.id"
+                />
+            </div>
+            <div class="form-group">
+                <label class="control-label">
+                    Hotel Name
+                </label>
+                <input type="text" 
+                       class="form-control" 
+                       name="HotelName"
+                       readonly
+                       [(ngModel)]="myBooking.HotelName"
+                />
+            </div>
+            <div class="form-group">
+                <label class="control-label">
+                    Name
+                </label>
+                <input type="text" 
+                       class="form-control" 
+                       name="name"
+                       [(ngModel)]="myBooking.name"
+                />
+            </div>
+            <div class="form-group">
+                <label class="control-label">
+                    Email
+                </label>
+                <input type="text" 
+                       class="form-control" 
+                       name="email"
+                       [(ngModel)]="myBooking.email"
+                />
+            </div>
+            <div class="form-group">
+                <label class="control-label">
+                    Cost
+                </label>
+                <input type="text" 
+                       class="form-control" 
+                       name="cost"
+                       [(ngModel)]="myBooking.cost"
+                />
+            </div>
+
+            <button type="submit" class="btn btn-success">
+                Place Booking
+            </button>
+        </form>
+    </div>
+</div>
