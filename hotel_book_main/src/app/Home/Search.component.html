@@ -1,0 +1,37 @@
+<div class="imageContainer">
+    <div id="logo">
+        <b>D!</b>
+    </div>
+    <!--Data Binding Binding-->
+    <div class="heading">
+        {{title}}
+    </div>
+    <div class="locationSelector">
+     
+        <select class="locationDropDown" (change)="citySelect($event.target.value)">
+            <option>-----SELECT CITY------</option>
+            <option *ngFor="let loc of location" [value]="loc._id">
+                {{loc.city_name}}
+            </option>
+        </select>
+
+        <select class="hotelDropDown" (change)="hotelSelect($event.target.value)">
+            <option>-----SELECT HOTEL------</option>
+            <option *ngFor="let hotel of hotels" [value]="hotel._id">
+                {{hotel.name}} | {{hotel.locality}}
+            </option>
+        </select>
+        
+    </div>
+</div>
+
+<!---
+// Property Binding
+ <img [src]=""/>
+// Event Binding
+<button (click)=""></button>
+
+//inbuilt pipe
+ <option>{{10 | currency:'INR'}}</option>
+            <option>{{date | date:'short'}}</option>
+-->

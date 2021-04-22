@@ -1,0 +1,30 @@
+<div>
+    <div class="quickSearchContainer">
+        <p class="quickSearchHeading">
+            Quick Search
+        </p>
+        <p class="quickSearchSubHeading">
+            Discover Trip By Type
+        </p>
+        <br/>
+        <span *ngFor="let trip of tripType">
+            <a [routerLink] = "['/listing',trip._id]">
+                <div class="tileContainer">
+                    <div class="tileComponent1">
+                        <img [src]="trip.image"/>
+                    </div>
+                    <div class="tileComponent2">
+                        <div class="componentHeading">
+                            {{trip.name}}
+                        </div>
+                        <div class="componentSubHeading">
+                            Start your {{trip.name}} with us
+                            <p>On Low Cost of {{500 | currency:'INR'}}</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </span>
+        
+    </div>
+</div>

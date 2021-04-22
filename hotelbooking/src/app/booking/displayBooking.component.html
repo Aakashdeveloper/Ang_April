@@ -1,0 +1,27 @@
+<div class="panel panel-danger">
+    <div class="panel-heading">
+        Bookings
+    </div>
+    <div class="panel-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Hotel Name</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let booking of details">
+                    <td>{{booking.id}}</td>
+                    <td>{{booking.HotelName}}</td>
+                    <td>{{booking.name}}</td>
+                    <td>{{booking.email}}</td>
+                    <td>{{booking.cost}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

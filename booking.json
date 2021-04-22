@@ -1,5 +1,46 @@
 {
-    "bookings":[
-        
-    ]
+  "bookings": [
+    {
+      "id": 9506,
+      "HotelName": "Snow Bliss",
+      "name": "Aakash ",
+      "email": "aakash@gmail.com",
+      "cost": "2704"
+    },
+    {
+      "id": 4856,
+      "HotelName": "DoubleTree by Hilton",
+      "name": "Aakash",
+      "email": "aakash@gmail.com",
+      "cost": "2419"
+    },
+    {
+      "id": 6494,
+      "HotelName": "The Park Baga River Goa",
+      "name": "Bhumika",
+      "email": "bhumika@gmail.com",
+      "cost": "4924"
+    },
+    {
+      "id": 3435,
+      "HotelName": "The Taj Mahal Palace",
+      "name": "Bhumika",
+      "email": "bhumika@gmail.com",
+      "cost": "16500"
+    },
+    {
+      "id": 9253,
+      "HotelName": "The Piccadily",
+      "name": "Aakash",
+      "email": "aakash@gmail.com",
+      "cost": "5170"
+    },
+    {
+      "id": 512,
+      "HotelName": "Westwood Residence",
+      "name": null,
+      "email": null,
+      "cost": "3455"
+    }
+  ]
 }
